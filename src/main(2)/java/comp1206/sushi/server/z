@@ -1,0 +1,9 @@
+	else {
+			for (Entry<Ingredient, Number> current: recipe.entrySet()) {
+				if (!((int) ingredientManager.getIngredientStock(current.getKey()) > (int) current.getValue())) {
+					System.out.println("Lacking " + current);
+					break;
+				}
+			}
+			dishRestockQueue.put(dish);
+		}
